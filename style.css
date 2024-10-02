@@ -1,0 +1,358 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizin: border-box;
+  box-sizing: border-box;
+}
+/* Jangan lupa titik koma [;] karena tanpa simbol itu tdk akan terdetek css nya */
+/* ada ratusan (400) line di css */
+/* list-style: none; = utk menghilangkan list titik */
+/* text-decoration: none; = utk menghilangkan garis bawah pada link */
+/* bersifat public dan live updete, jadi semua elemennya ngikut */
+/* css ada keluarganya */
+/* harus explore biar tau gunanya, semua tag itu hanya nama */
+/*  kalo class pake titik, kalo elemen tdk pake titik */
+/* css bukan dihafal, tapi harus dibiasakan, sering-sering explor */
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* harus a karena beda section (walaupun sama line) dgn li */
+/* ini utk mendekorasi head nya dlm skala umum */
+/* main = content (di dlm body) */
+/* font-family - font keseluruhan */
+/*  */
+
+body,
+main {
+  margin: 0 auto;
+  font-family: "Roboto", "Helvetica", Arial, sans-serif;
+  background-color: rgb(0, 187, 255);
+}
+/* fixed = tetap */
+/* px itu bisa di custom, width 100% = satu monitor penuh, kalo width 100% bisa di ubah */
+/* 50% = setengah monitor */
+/*  */
+/*  */
+/* CSS untuk HEADER */
+header {
+  position: fixed;
+  top: 0;
+  height: 52px;
+  width: 100%;
+  color: rgb(0, 229, 255);
+  background-color: rgb(0, 136, 255);
+  z-index: 10;
+}
+
+/* .header-wrapper {
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    
+} */
+
+.header-list {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0;
+}
+/* header punya anak li, li punya anak a */
+/* css detail, ngubahnya harus satu-satu */
+.header-list li {
+  margin: 0;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.header-list li a {
+  text-decoration: none;
+  color: #f5f5f7;
+}
+
+.logo {
+  width: 25px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-dropdown input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+/* kalo angkanya ada 2 berarti mengatur 2 sisi, kalo 4 ber.... */
+/* cursor: pointer; untuk merubah kursor menjadi bentuk tangan atau sebaliknya*/
+/* horder adalah sentuhan kursor */
+.search-dropdown button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.search-dropdown button:hover {
+  background-color: #555;
+}
+
+/* Content */
+
+.contents {
+  background-color: white;
+}
+
+.image-container .iphone-12 {
+  height: 640px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.iphone-12 {
+  height: 100%;
+  background-image: url(img/iphone_12.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iphone-12 .title {
+  text-align: center;
+  padding-top: 50px;
+}
+.iphone-12 .title h1 {
+  font-size: 50px;
+  color: rgb(255, 127, 127);
+  font-weight: 700;
+}
+
+.iphone-12 .title p {
+  font-size: 25;
+  color: rgb(182, 35, 35);
+  font-weight: bold;
+}
+
+.cta-links {
+  text-align: center;
+}
+
+/* padding-top = [padding adalah jarak dalam, margin adalah jarak luar] */
+.image-container .iphone-12-pro {
+  height: 640px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* min-height = adalah minimum tinggi */
+/* max-height = adalah maximum tinggi */
+.iphone-12-pro {
+  height: 90%;
+  min-height: 100%;
+  background-image: url(img/iphone12pro-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iphone-12-pro .title {
+text-align: center;
+}
+/* padding-top = [padding adalah jarak dalam, margin adalah jarak luar] */
+.image-container .iphone-12-pro {
+  height: 640px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* min-height = adalah minimum tinggi */
+/* max-height = adalah maximum tinggi */
+.iphone-12-pro {
+  height: 90%;
+  min-height: 100%;
+  background-image: url(img/iphone12pro-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iphone-12-pro .title {
+text-align: center;
+}
+
+.iphone-12-pro .title h1 {
+  font-size: 30px;
+  color: white;
+  font-weight: normal;
+}
+
+.iphone-12-pro .title p {
+font-size: 30px;
+color: white;
+font-weight: normal;
+}
+
+.iphone-12-pro .cta-links {
+text-align: center;
+}
+
+.image-container .fitness {
+  height: 500px;
+  width: 100%;
+  padding-top: 0%;
+  flex: auto;
+}
+
+.fitness {
+  height: 90%;
+  min-height: 100%;
+  background-image: url(img/apple-fitness.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 00px;
+}
+
+.title .hello {
+  text-align: center;
+  font-weight: normal;
+  font-weight: 700px;
+  margin-top: 40px;
+  color: rgba(0,0,0,0.897);
+}
+
+.title .A {
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  margin-top: 30px;
+  color: rgba(0,0,0,0.87);
+}
+
+.fitness .cta-links {
+  text-align: center;
+}
+
+/* main */
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+li {
+  color: white;
+  height: 770px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-list li {
+flex: auto;
+width: 50%;
+}
+
+.image {
+margin: 0 auto;
+width: 100%;
+}
+
+.headline {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.theme-dark {
+  background-color: #000;
+  margin: 0 auto;
+}
+
+.theme-light {
+  background-color: #fbfbfd;
+  margin: 0 auto;
+  color: #1D1D1F;
+}
+
+.container-main {
+  width: 98%;
+  height: 100%;
+}
+
+ul li img {
+  width: 100%;
+}
+
+.cta-links a {
+  font-size: 23px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #2997FF;
+  font-weight: normal;
+}
+
+.cta-links a:hover {
+  text-decoration: underline;
+}
+
+/* zoom hover images */
+
+.unit-image figure img {
+  transition: transform .2s;
+}
+
+.unit-image figure img:hover {
+  transform: scale(1.10);
+}
+
+.apple-watch-logo {
+  width: 25%;
+}
+
+.title .A {
+text-align: center;
+font-size: 30px;
+font-weight: normal;
+margin-top: 30px;
+color: rgba(0,0,0,0.87);
+}
+
+/* Responsive */
+.menu-logo {
+  visibility: hidden;
+  position: absolute;
+}
+
+.fa-searchs {
+  visibility: hidden;
+}
